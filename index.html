@@ -541,6 +541,8 @@ function esc(s){ const d=document.createElement('div'); d.textContent=s; return 
 
 /* ── MAIN RENDER ── */
 function run(){
+  const si = document.getElementById('search-in');
+  if (si) search = si.value;
   renderControls();
   const visible = filter(WHISKIES);
   const L = I18N[lang];
